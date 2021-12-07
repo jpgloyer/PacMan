@@ -74,6 +74,7 @@ class User:
             self.lives += 1
             self.pickup_name = ""
         elif self.pickup_name == "Fruit":
+            print(self.Points)
             self.Points += 500
             self.pickup_name = ""
         elif self.pickup_name == "Big_Dot":

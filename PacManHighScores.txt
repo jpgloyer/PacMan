@@ -9,3 +9,5 @@
 9. Pierce: 7000
 10. Pierce: 5710
 11. Pierce: 4040
+12. Pierce: 800
+13. Pierce: 570
