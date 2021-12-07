@@ -15,6 +15,7 @@ from contextlib import redirect_stdout
 from Pickup import Pickup
 import random
 
+#Commit test
 
 def main():
 
