@@ -14,13 +14,13 @@ class Pickup:
         elif type_number == 1:
             self.type = "Fruit"
         elif type_number == 2:
-            self.type = "Bomb"
+            self.type = "Big_Dot"
         elif type_number == 3:
             self.type = "Laser"
         elif type_number == 4:
             self.type = "Invisibility"
         elif type_number == 5:
-            self.type = "Big_Dot"
+            self.type = "Bomb"
 
     #MAKE A DRAW FUNCTION
     def draw(self, screen):

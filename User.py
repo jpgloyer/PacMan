@@ -74,8 +74,8 @@ class User:
             self.lives += 1
             self.pickup_name = ""
         elif self.pickup_name == "Fruit":
-            print(self.Points)
             self.Points += 500
+            print(self.Points)
             self.pickup_name = ""
         elif self.pickup_name == "Big_Dot":
             for i in range(len(Ghost_List)):
