@@ -9,7 +9,7 @@ your favorite command line.
 If you're saavy with Python and feel like contributing commits/branches, feel free to help me out.
 
 Detailed Steps To Run:
-1. Code > Download ZIP
+1. Code(Big green button, top right) > Download ZIP
 2. Decompress ZIP folder (Remember the folder that stores the decompressed files; it would be smart to store it on the desktop)
 3. Go to python.org > Downloads Drop Down Menu > Download for your OS
 3.5 (Python acts as a code interpreter. The code here can only be run on your machine with python.exe providing translation to lower level code. It is very trustworth reliable software and is an industry standard)
