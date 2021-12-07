@@ -1,0 +1,29 @@
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+Please enter your name without spaces:
+
+
+
+GAME OVER
+Pierce: 100
+
+
+High Scores:
+1. PierceHighScore: 5480
+
+2. PierceGloyer: 5280
+
+3. PierceGloyer: 5180
+
+4. PierceGotSoClose: 4870
+
+5. mom: 4440
+
