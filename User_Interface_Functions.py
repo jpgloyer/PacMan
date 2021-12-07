@@ -63,7 +63,7 @@ def refresh_loop(screen, dot_list, PacMan, maze, Ghost_List, Round_num, Pickup1)
                 PacMan.pickup_name = Pickup1.type
                 PacMan.pickup_behaviors(Ghost_List)
                 Pickup1.active = False
-                Pickup1 = Pickup(random.randrange(0, 6))
+                Pickup1 = Pickup(random.randrange(0, 3))
 
     #Draws Active Dots
         for i in range(len(dot_list)):

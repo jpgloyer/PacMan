@@ -27,7 +27,7 @@ def main():
     maze = Maze(EMV.Grid_y, EMV.Grid_x)
     dot_list = Dot.dot_generationv2(maze.Maze)
     PacMan = User()
-    Pickup1 = Pickup(5)#random.randrange(0, 6))
+    Pickup1 = Pickup(random.randrange(0, 3))
     Red = Ghost(EMV.Red)
     Pink = Ghost(EMV.Pink)
     Orange = Ghost(EMV.Orange)
