@@ -6,6 +6,7 @@ import pygame
 from pygame import key
 from Dot import dot
 from Ghost import Ghost
+from Projectile import Projectile
 from User import User
 import EMV
 import ScoreSort
@@ -27,6 +28,7 @@ def refresh_loop(screen, dot_list, PacMan, maze, Ghost_List, Round_num, Pickup1)
     direction_queue: str = ' '
     dead: bool = False
     Points_per_ghost: int = 100
+    shot = Projectile('L', PacMan.x_grid, PacMan.y_grid)
 
     #Round beginning Pygame window settings
     Round_string = "Round " + str(Round_num)
@@ -46,12 +48,17 @@ def refresh_loop(screen, dot_list, PacMan, maze, Ghost_List, Round_num, Pickup1)
         clock.tick(50)
         input_character = get_inputted_key_char()
 
+
+
         if input_character == 'q':
             PacMan.quitting = True
 
     #Refreshes black space (clears previous character locations)
         draw_black_space(screen, maze.Maze)
 
+
+        shot.move()
+        shot.draw(screen)
 
     #----------------------PICKUP SYSTEM----------------------
         if PacMan.Points > maze.pickup_trigger:
