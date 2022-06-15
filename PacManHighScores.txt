@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. Pierce: 30000
 2. Pierce: 20000
 3. Pierce: 17210
@@ -67,3 +68,14 @@
 67. Pierce: 0
 68. Pierce: 0
 69. P: 0
+=======
+1. Pierce: 20000
+2. Pierce: 17210
+3. Pierce: 10160
+4. Pierce: 9060
+5. Pierce: 8940
+6. Pierce: 8300
+7. Pierce: 8220
+8. Pierce: 7910
+9. Pierce: 7000
+>>>>>>> adfdcd7b47903070c8c6e973cf460b5291afefe2
