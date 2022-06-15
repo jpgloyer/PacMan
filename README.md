@@ -6,6 +6,8 @@ If you're reading this, all you need to do to play the current version is downlo
 make sure Python is installed on your machine (python.org), and run "python.exe Main.py" in 
 your favorite command line.
 
+If you wish to run without a command line, you will have to slightly modify the code. It should be as simple as uncommenting lines 22 and 23 in Main.py, and shifting the below Main.py code to be within the second "with" statement.
+
 If you're saavy with Python and feel like contributing commits/branches, feel free to help me out.
 
 Detailed Steps To Run:
@@ -21,3 +23,4 @@ Detailed Steps To Run:
 6b. User->Desktop->PacMan
 7. Run command 'python.exe Main.py'
 8. Have fun! Let me know about any game breaking bugs
+ 

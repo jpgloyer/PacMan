@@ -19,7 +19,7 @@ import random
 def main():
 
     #ENABLE THIS LOOP if running without a command line
-    #with open('out.txt', 'w') as f:
+    #with open('terminal_log.txt', 'w') as f:
         #with redirect_stdout(f):
 
     #Object creation

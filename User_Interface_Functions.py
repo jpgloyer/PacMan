@@ -28,7 +28,7 @@ def refresh_loop(screen, dot_list, PacMan, maze, Ghost_List, Round_num, Pickup1)
     direction_queue: str = ' '
     dead: bool = False
     Points_per_ghost: int = 100
-    shot = Projectile('L', PacMan.x_grid, PacMan.y_grid)
+    #shot = Projectile('L', PacMan.x_grid, PacMan.y_grid)
 
     #Round beginning Pygame window settings
     Round_string = "Round " + str(Round_num)
@@ -57,8 +57,8 @@ def refresh_loop(screen, dot_list, PacMan, maze, Ghost_List, Round_num, Pickup1)
         draw_black_space(screen, maze.Maze)
 
 
-        shot.move()
-        shot.draw(screen)
+        #shot.move()
+        #shot.draw(screen)
 
     #----------------------PICKUP SYSTEM----------------------
         if PacMan.Points > maze.pickup_trigger:
