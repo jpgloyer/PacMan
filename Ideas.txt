@@ -1,9 +1,0 @@
-In corners mode, randomize target location for each ghost within the range of their corner once every 10 blocks (once every 2 seconds)
-Only randomly generate one coordinate (in top left corner), then add half the width/height of the maze to make new random coordinates for the other ghosts
-
-Give each ghost a constantly ticking timer to trigger certain actions (i.e. picking a new random target location, switching modes)
-
-
-Set a character in the maze text file to be PacMan's spawn (and double as pickup location)
-
-Fix the coordinate system
