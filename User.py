@@ -13,6 +13,7 @@ class User:
         self.Points_per_ghost = 100
         self.quitting: bool = False
         self.pickup_name: str = ""
+        self.Deathless = False
     
 
     def Move(self, direction_queue, maze):

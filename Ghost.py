@@ -20,6 +20,7 @@ class Ghost:
         self.ghost_corral_coord_mod: int = 0
         self.frightened_timer: int = 50
         self.speed = EMV.Ghost_default_speed
+        self.dots_are_permanent = False
 
         
 
@@ -163,7 +164,8 @@ class Ghost:
 
             elif self.status == "Frightened":
                 self.randomize_direction(maze)  
-                self.frightened_timer -= 1
+                if not self.dots_are_permanent:
+                    self.frightened_timer -= 1
                 if self.frightened_timer <= 0:
                     PacMan.Points_per_ghost = 100
                     self.reset_ghost()

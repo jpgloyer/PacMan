@@ -105,7 +105,8 @@ def refresh_loop(screen, dot_list, PacMan, maze, Ghost_List, Round_num, Pickup1)
 
     #Ghosts
         for i in range(len(Ghost_List)):
-            if (abs(Ghost_List[i].x_grid - PacMan.x_grid) < .5) and (abs(Ghost_List[i].y_grid - PacMan.y_grid) < .5) and Ghost_List[i].status != "Frightened":
+            #Insert deathless command
+            if (abs(Ghost_List[i].x_grid - PacMan.x_grid) < .5) and (abs(Ghost_List[i].y_grid - PacMan.y_grid) < .5) and Ghost_List[i].status != "Frightened" and not PacMan.Deathless:
                 PacMan.lives -= 1
                 dead = True
                 PacMan.Points_per_ghost = 100

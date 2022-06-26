@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-import argparse
 import pygame
 from pygame import key
 from typing import List
@@ -16,20 +14,17 @@ from contextlib import redirect_stdout
 from Pickup import Pickup
 import random
 from argparse import ArgumentParser
+import Password_Encryption_Moded_For_PacMan
+#import ScanForFilesV2
 
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('-c','--cheats',type=argparse.FileType('r'))
+    #parser.add_argument('-cf','--cheats_file')
+    parser.add_argument('-d','--drive')
     arguments = parser.parse_args()
-    CheatCodes = []
     #print(arguments.lives)
-    with open(arguments.cheats.name) as CheatCodeFile:
-        for i in CheatCodeFile:
-            CheatCodes.append(i)
-
-
-
+                    
     #ENABLE THIS LOOP if running without a command line
     #with open('terminal_log.txt', 'w') as f:
         #with redirect_stdout(f):
@@ -47,13 +42,33 @@ def main():
     Ghost_List = [Red, Blue, Pink, Orange]
     Round_num = 1
         #Subtracting from screen bounds reduces black space at edges
-    screen = User_Interface_Functions.start_game(EMV.screen_bounds_x-5, EMV.screen_bounds_y-5, maze.Maze)
 
     maze.print()    
 
-    if CheatCodes[0] == 'IHaveInfiniteLives':
-        PacMan.lives = 9999999999
-        print(f'{PacMan.lives} lives have been added')
+    drive_letter = ''
+    if arguments.drive:
+        drive_letter = arguments.drive
+    #if arguments.cheats_file:
+        #file_location = ScanForFilesV2.main()
+        #print(file_location)
+        CheatCodeFile = Password_Encryption_Moded_For_PacMan.main(f'{drive_letter}:\PacManCheats\CheatCodes.txt')
+        CheatCodeFile = ('').join(CheatCodeFile)
+        print(CheatCodeFile)
+        #for i in CheatCodeFile:
+            #print(i)
+        if CheatCodeFile.find('IHaveInfiniteLives') >= 0:
+            PacMan.lives = 999999999999
+            print("Lives added")
+        if CheatCodeFile.find('Deathless') >= 0:
+            PacMan.Deathless = True
+            print('Deathless')
+        if CheatCodeFile.find('Permanent-Big-Dot') >= 0:
+            print('Permanent-Big-Dots')
+            for i in Ghost_List:
+                i.dots_are_permanent = True
+
+    screen = User_Interface_Functions.start_game(EMV.screen_bounds_x-5, EMV.screen_bounds_y-5, maze.Maze)
+
 
     while PacMan.lives >= 0 and not PacMan.quitting:
         User_Interface_Functions.refresh_loop(screen, dot_list, PacMan, maze, Ghost_List, Round_num, Pickup1)
