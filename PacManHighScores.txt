@@ -1,0 +1,13 @@
+1. Pierce: 20000
+2. Pierce: 17210
+3. Pierce: 10160
+4. Pierce: 9060
+5. Pierce: 8940
+6. Pierce: 8300
+7. Pierce: 8220
+8. Pierce: 7910
+9. Pierce: 7000
+10. Pierce: 150
+11. Pierce: 100
+12. Pierce: 10
+13. Pierce: 0
