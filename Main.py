@@ -43,29 +43,30 @@ def main():
     Round_num = 1
         #Subtracting from screen bounds reduces black space at edges
 
-    maze.print()    
+    #maze.print()    
 
     drive_letter = ''
     if arguments.drive:
-        drive_letter = arguments.drive
-    #if arguments.cheats_file:
-        #file_location = ScanForFilesV2.main()
-        #print(file_location)
-        CheatCodeFile = Password_Encryption_Moded_For_PacMan.main(f'{drive_letter}:\PacManCheats\CheatCodes.txt')
-        CheatCodeFile = ('').join(CheatCodeFile)
-        print(CheatCodeFile)
-        #for i in CheatCodeFile:
-            #print(i)
-        if CheatCodeFile.find('IHaveInfiniteLives') >= 0:
-            PacMan.lives = 999999999999
-            print("Lives added")
-        if CheatCodeFile.find('Deathless') >= 0:
-            PacMan.Deathless = True
-            print('Deathless')
-        if CheatCodeFile.find('Permanent-Big-Dot') >= 0:
-            print('Permanent-Big-Dots')
-            for i in Ghost_List:
-                i.dots_are_permanent = True
+        try:
+            drive_letter = arguments.drive
+            CheatCodeFile = Password_Encryption_Moded_For_PacMan.main(f'{drive_letter}:\PacManCheats\CheatCodes.txt')
+            CheatCodeFile = ('').join(CheatCodeFile)
+            if CheatCodeFile.find('IHaveInfiniteLives') >= 0:
+                PacMan.lives = 999999999999
+                print("Lives added")
+            if CheatCodeFile.find('Deathless') >= 0:
+                PacMan.Deathless = True
+                print('Deathless')
+            if CheatCodeFile.find('Permanent-Big-Dot') >= 0:
+                print('Permanent-Big-Dots')
+                for i in Ghost_List:
+                    i.dots_are_permanent = True
+        except FileNotFoundError:
+            print('Modification File Not Found at Expected Location')
+
+
+
+
 
     screen = User_Interface_Functions.start_game(EMV.screen_bounds_x-5, EMV.screen_bounds_y-5, maze.Maze)
 
